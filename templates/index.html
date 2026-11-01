@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>IMDB API - Página de Login</title>
+</head>
+<body>
+    <div class="main-div">
+        <h1>Página Inicial</h1>
+        <p>Seja bem-vindo(a) à IMDB API</p>
+        <form class="login-form">
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email" class="input-info">
+            <label for="password">Senha:</label>
+            <input type="password" name="password" class="input-info">
+            <button id="login-button" type="submit">Fazer Login</button>
+            <p class="error-message" hidden></p>
+        </form>
+        <p id="call-to-register">Não possui uma conta ainda? Registre-se <a href="/register">AQUI</a>!</p>
+    </div>
+</body>
+<script src="../static/js/index.js" type="module"></script>
+</html>

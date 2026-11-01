@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB API - Registro</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="main-div">
+        <h1>Faça sua conta!</h1>
+        <form class="register-form">
+            <label for="name">Nome</label>
+            <input type="text" name="name" class="input-info">
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" class="input-info">
+            <label for="password">Senha</label>
+            <input type="password" name="password" class="input-info">
+            <button id="register-button" type="submit">Cadastrar</button>
+        </form>
+        <div class="error-message" hidden></div>
+        <div class="success-message" hidden></div>
+        <div>
+            <p>Já possui uma conta? Faça LOGIN <a href="/">AQUI</a>!</p>
+        </div>
+    </div>
+    <script src="../static/js/register.js"></script>
+</body>
+</html>

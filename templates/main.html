@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB API - Página Principal</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="movies-div">
+        <div class="header">
+            <h1 class="page-title"><img src="../static/images/film.png" alt="" width="32">Filmes em Destaque</h1>
+            <div class="welcome-message-div">
+                <p class="welcome-message"></p>
+            </div>
+            <div class="buttons-movies">
+                <div class="movies-menu">
+                    <p>Ordenar filmes por:</p>
+                    <button class="order-normally-button" hidden>Ordenação Normal</button>
+                    <button class="release-date-button">Data de Estreia</button>
+                    <button class="best-reviewed-button">Melhor Avaliados</button>
+                </div>
+                <div class="return-to-movies-div" hidden>
+                    <button class="return-to-movies-button">Voltar para os Filmes</button>
+                </div>
+                <div class="movies-user-div">
+                    <button class="my-user-data-button">Meus Dados</button>
+                    <form action="/api/auth/logout" method="POST">
+                        <button type="submit">Sair</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p class="error-message" hidden></p>
+        <p class="success-message" hidden></p>
+        <div class="my-data-div" hidden></div>
+        <div class="users-page-buttons" hidden>
+            <button class="change-user-password-button">Alterar Senha</button>
+            <button class="reviewed-movies-list-button">Lista de Filmes Avaliados</button>
+            <button class="not-reviewed-movies-list-button">Lista de Filmes Não-Avaliados</button>
+        </div>
+        <div class="all-movies"></div>
+        <dialog id="reviewModal">
+            <div class="review-content">
+                <h2 class="modal-movie-title" hidden></h2>
+                <div class="close-modal-div">
+                    <button class="close-modal-button" onclick="reviewModal.close()">&times;</button>
+                </div>
+                <form class="review-form">
+                    <label for="grade">Nota:</label>
+                    <input type="number" min="0", max="10" step="0.5" name="grade" id="grade-input">
+                    <label for="content">Comentários:</label>
+                    <textarea name="content" id="review-input"></textarea>
+                    <button class="send-comment-button" type="submit">Enviar Avaliação</button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="showReviewsModal">
+            <div class="show-review-content">
+                <div class="close-modal-div">
+                    <button
+                        class="close-modal-button"
+                        onclick="showReviewsModal.close()"
+                    >&times;</button>
+                </div>
+                <h2 class="modal-movie-title-h2"></h2>
+                <div class="show-reviews"></div>
+            </div>
+        </dialog>
+    </div>
+</body>
+<script src="../static/js/main.js"></script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>IMDB API - Página de Administrador</title>
+</head>
+<body>
+    <div class="main-div">
+        <h1>Página do Administrador</h1>
+        <p>Seja bem-vindo(a) à administração da IMDB API</p>
+        <p class="error-message" hidden></p>
+        <p class="success-message" hidden></p>
+        <div class="buttons-functions-admin">
+            <button id="get-blocked-users-button">Ver Usuários Bloqueados</button>
+            <button id="block-user-button">Bloquear Usuário</button>
+            <button id="change-user-password-button">Mudar Senha de Usuário</button>
+            <button id="add-movies-button">Adicionar Filmes à Lista</button>
+            <button id="delete-movies-button">Deletar Filmes da Lista</button>
+            <button id="verify-review-button">Verificar Avaliação</button>
+            <form action="/api/auth/logout" method="POST">
+                <button type="submit">Sair</button>
+            </form>
+        </div>
+        <div class="users-list-page" hidden></div>
+        <div class="block-user-page" hidden></div>
+        <div class="change-user-password-page" hidden></div>
+        <div class="add-movies-page" data-add-movie-url="{{ url_for('admin.add_movie_route') }}" hidden></div>
+        <div class="delete-movies-page" data-add-movie-url="{{ url_for('admin.delete_movie_route') }}" hidden></div>
+        <div class="verify-reviews-page" hidden></div>
+    </div>
+</body>
+<script src="../static/js/admin.js" type="module"></script>
+</html>
